@@ -1,0 +1,91 @@
+body {
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('./fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid';
+  src: url('./fonts/DroidSerif.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Bold';
+  src: url('./fonts/DroidSerif-Bold.ttf') format('truetype');
+}
+
+.container {
+  max-width: 1100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+#page {
+  margin: 30px;
+  position: relative;
+}
+
+#last-name {
+  float: left;
+  position: relative;
+  font-family: 'Loto', sans-serif;
+  font-size: 2em;
+  color: #454851;
+}
+
+.boxes {
+  height: 300px;
+  width: 300px;
+  float: left;
+  border: 3px solid #454851;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+  opacity: 0.7;
+}
+
+.boxes > h1 {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  color: #FCEFF9;
+  font-size: 3em;
+  font-family: 'Droid', serif;
+}
+
+#box-1 {
+  background-image: url('./images/slice.jpg');
+  background-size: cover;
+}
+#box-2 {
+  background-image: url('./images/slice-1.jpg');
+  background-size: cover;
+}
+#box-3 {
+  background-image: url('./images/slice-2.jpg');
+  background-size: cover;
+}
+#box-4 {
+  background-image: url('./images/slice-3.jpg');
+  background-size: cover;
+}
+#box-5 {
+  background-image: url('./images/slice-4.jpg');
+  background-size: cover;
+}
+#box-6 {
+  background-image: url('./images/slice-5.jpg');
+  background-size: cover;
+}
