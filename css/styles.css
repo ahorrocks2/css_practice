@@ -1,3 +1,7 @@
+body {
+  background-image: url('./images/new_year_background.png');
+}
+
 @font-face {
   font-family: 'Moriston';
   src: url('./fonts/MoristonPersonal-Regular.otf') format('truetype');
@@ -40,7 +44,7 @@
   left: 180px;
   color: white;
   font-size: 3em;
-  font-family: 'Moriston', serif;
+  font-family: 'Moriston', sans-serif;
   z-index: 1;
 }
 
@@ -78,5 +82,13 @@
   font-size: 1.5em;
   color: #454851;
   margin-top: -21px;
+}
 
+#about {
+  border: 3px solid #454851;
+  clear: both;
+  margin: 5px;
+  color: #7BAE7F;
+  font-family: 'Moriston', sans-serif;
+  padding-left: 20px;
 }
