@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".boxes").hover(function(){
+  $(".boxes").not($("#box-6")).hover(function(){
     $(this).find(".project-description").show();
     $(this).find(".letter").hide();
     $("img").not($(this).find("img")).hide();
@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(".project-description").hide();
     $(this).find(".letter").show();
     $("img").not($(this).find("img")).show();
-    $(this).find("img").css("opacity", ".6");
+    $(this).find("img").css("opacity", ".1");
   });
 
 

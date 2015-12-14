@@ -2,6 +2,8 @@ $primary-font: Moriston, sans-serif;
 $box-border: 3px solid #454851;
 $aqua: #45B69C;
 $grey: #454851;
+$soft-red: #BA6E6E;
+$link-color: #2C4251;
 
 body {
   background-image: url('./images/new_year_background.png');
@@ -39,11 +41,11 @@ body {
   background-color: rgba(221, 216, 196, .5);
 
   img {
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   .project-description {
-    background-color: #BA6E6E;
+    background-color: $soft-red;
     position: absolute;
     width: 100%;
     top: 210px;
@@ -52,6 +54,15 @@ body {
     font-family: $primary-font;
     color: $grey;
     display: none;
+  }
+
+  #social-links {
+    padding-top: 100px;
+
+    i {
+      color: $link-color;
+      padding: 20px;
+    }
   }
 }
 
@@ -82,4 +93,9 @@ body {
   padding-left: 20px;
   background-color: rgba(221, 216, 196, .5);
   padding-bottom: 10px;
+
+  a {
+    text-decoration: none;
+    color: $link-color;
+  }
 }
