@@ -4,6 +4,9 @@ body {
 @font-face {
   font-family: 'Moriston';
   src: url("./fonts/MoristonPersonal-Regular.otf") format("truetype"); }
+@font-face {
+  font-family: 'Ananda';
+  src: url("./fonts/Ananda-Regular.ttf") format("truetype"); }
 .container {
   max-width: 1100px;
   position: absolute;
@@ -53,23 +56,41 @@ body {
   z-index: 1; }
 
 .last-name {
-  float: right;
-  font-family: Moriston, sans-serif;
+  clear: both;
+  width: 912px;
+  font-family: Ananda, serif;
   font-size: 1.5em;
   color: #BD9391;
-  margin-top: -21px; }
+  letter-spacing: 35px;
+  position: inline;
+  padding: 20px 25px 20px 35px; }
 
 #about {
   border: 3px solid #454851;
   clear: both;
-  margin: 5px;
+  margin-left: 5px;
   color: #BD9391;
   font-family: Moriston, sans-serif;
-  padding-left: 20px;
+  padding: 20px;
   background-color: rgba(221, 216, 196, 0.5);
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  width: 892px; }
+  #about h1 {
+    font-family: Ananda, serif; }
   #about a {
     text-decoration: none;
-    color: #2C4251; }
+    color: #2C4251;
+    font-family: Ananda, serif; }
+
+@media screen and (max-width: 1010px) {
+  .last-name {
+    display: none; }
+
+  #about {
+    width: 577px; } }
+@media screen and (max-width: 702px) {
+  #about {
+    width: 260px;
+    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
