@@ -11,7 +11,7 @@ $(document).ready(function() {
     $(this).find("img").css("opacity", ".1");
   });
 
-
+  $("#about").hide();
 
 
 })

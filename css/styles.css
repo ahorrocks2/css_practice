@@ -8,7 +8,6 @@ body {
   font-family: 'Ananda';
   src: url("./fonts/Ananda-Regular.ttf") format("truetype"); }
 .container {
-  max-width: 1100px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,68 +18,81 @@ body {
     margin: 30px;
     position: relative; }
 
-.boxes {
-  height: 300px;
-  width: 300px;
-  float: left;
-  border: 3px solid #454851;
-  margin: 5px;
-  text-align: center;
-  position: relative;
-  background-color: rgba(221, 216, 196, 0.5); }
-  .boxes img {
-    opacity: 0.1; }
-  .boxes .project-description {
-    background-color: #BA6E6E;
+a {
+  text-decoration: none;
+  color: #2C4251; }
+
+#box {
+  float: right;
+  width: 80%; }
+  #box .boxes {
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    position: relative;
+    background-color: rgba(221, 216, 196, 0.5); }
+    #box .boxes img {
+      opacity: 0.1; }
+  #box .letter {
     position: absolute;
-    width: 100%;
-    top: 210px;
-    left: 0;
-    z-index: 1;
+    top: 90px;
+    left: 180px;
+    color: #45B69C;
+    font-size: 3em;
     font-family: Moriston, sans-serif;
-    color: #454851;
-    display: none; }
-  .boxes #social-links {
-    padding-top: 100px; }
-    .boxes #social-links i {
-      color: #2C4251;
-      padding: 20px; }
+    z-index: 1; }
+  #box .last-name {
+    clear: both;
+    width: 912px;
+    font-family: Ananda, serif;
+    font-size: 1.5em;
+    color: #BD9391;
+    letter-spacing: 35px;
+    padding: 20px 25px 20px 35px; }
 
-.letter {
-  position: absolute;
-  top: 90px;
-  left: 180px;
-  color: #45B69C;
-  font-size: 3em;
-  font-family: Moriston, sans-serif;
-  z-index: 1; }
+#left-col {
+  float: left;
+  position: relative;
+  width: 15%;
+  height: 100%;
+  padding: 20px; }
+  #left-col #nav-buttons {
+    color: white;
+    letter-spacing: 3px;
+    font-family: Moriston, sans-serif;
+    position: absolute;
+    top: 280px;
+    left: 20px;
+    right: 0; }
+    #left-col #nav-buttons #about-me-button {
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid #454851;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent;
+      margin-bottom: 10px; }
+    #left-col #nav-buttons #contact {
+      width: 0;
+      height: 0;
+      border-top: 100px solid #BD9391;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent; }
+  #left-col #about {
+    color: #BD9391;
+    font-family: Moriston, sans-serif;
+    line-height: 150%;
+    letter-spacing: 1px; }
+    #left-col #about .keyword {
+      color: #2C4251; }
 
-.last-name {
-  clear: both;
-  width: 912px;
-  font-family: Ananda, serif;
-  font-size: 1.5em;
-  color: #BD9391;
-  letter-spacing: 35px;
-  position: inline;
-  padding: 20px 25px 20px 35px; }
-
-#about {
-  border: 3px solid #454851;
-  clear: both;
-  margin-left: 5px;
-  color: #BD9391;
-  font-family: Moriston, sans-serif;
-  padding: 20px;
-  background-color: rgba(221, 216, 196, 0.5);
-  padding-bottom: 10px;
-  width: 892px; }
-  #about h1 {
-    font-family: Ananda, serif; }
-  #about a {
-    text-decoration: none;
-    color: #2C4251;
-    font-family: Ananda, serif; }
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
 
 @media screen and (max-width: 1010px) {
   .last-name {

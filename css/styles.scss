@@ -22,7 +22,6 @@ body {
 }
 
 .container {
-  max-width: 1100px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -37,83 +36,146 @@ body {
   }
 }
 
-.boxes {
-  height: 300px;
-  width: 300px;
-  float: left;
-  border: $box-border;
-  margin: 5px;
-  text-align: center;
-  position: relative;
-  background-color: rgba(221, 216, 196, .5);
+a {
+  text-decoration: none;
+  color: $link-color;
+}
 
-  img {
-    opacity: 0.1;
+#box {
+  float:right;
+  width: 80%;
+
+  .boxes {
+    height: 300px;
+    width: 300px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    position: relative;
+    background-color: rgba(221, 216, 196, .5);
+
+    img {
+      opacity: 0.1;
+    }
+
+    // .project-description {
+    //   background-color: $soft-red;
+    //   position: absolute;
+    //   width: 100%;
+    //   top: 210px;
+    //   left: 0;
+    //   z-index: 1;
+    //   font-family: $primary-font;
+    //   color: $grey;
+    //   display: none;
+    // }
+
   }
 
-  .project-description {
-    background-color: $soft-red;
+  .letter {
     position: absolute;
-    width: 100%;
-    top: 210px;
-    left: 0;
-    z-index: 1;
+    top: 90px;
+    left: 180px;
+    color: $aqua;
+    font-size: 3em;
     font-family: $primary-font;
-    color: $grey;
-    display: none;
+    z-index: 1;
   }
 
-  #social-links {
-    padding-top: 100px;
+  .last-name {
+    clear:both;
+    width: 912px;
+    font-family: $secondary-font;
+    font-size: 1.5em;
+    color: $text-color ;
+    letter-spacing: 35px;
+    padding: 20px 25px 20px 35px;
+  }
+}
 
-    i {
-      color: $link-color;
-      padding: 20px;
+
+#left-col {
+  float: left;
+  position: relative;
+  width: 15%;
+  height: 100%;
+  padding: 20px;
+
+
+  #nav-buttons {
+    color: white;
+    letter-spacing: 3px;
+    font-family: $primary-font;
+
+    position: absolute;
+    top: 280px;
+    left: 20px;
+    right: 0;
+
+
+    #about-me-button {
+      width: 0;
+      height: 0;
+
+      border-bottom: 100px solid $grey;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent;
+
+      margin-bottom: 10px;
+
+
+    }
+
+    #contact {
+      width: 0;
+      height: 0;
+
+      border-top: 100px solid $text-color;
+      border-right: 100px solid transparent;
+      border-left: 100px solid transparent;
     }
   }
+
+  #about {
+    color:  $text-color;
+    font-family: $primary-font;
+    line-height: 150%;
+    letter-spacing: 1px;
+
+    .keyword {
+      color: $link-color;
+    }
+  }
+
 }
 
-.letter {
-  position: absolute;
-  top: 90px;
-  left: 180px;
-  color: $aqua;
-  font-size: 3em;
-  font-family: $primary-font;
-  z-index: 1;
-}
 
-.last-name {
-  clear:both;
-  width: 912px;
-  font-family: $secondary-font;
-  font-size: 1.5em;
-  color: $text-color ;
-  letter-spacing: 35px;
-  position: inline;
-  padding: 20px 25px 20px 35px;
-}
-
-#about {
-  border: $box-border;
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
   clear: both;
-  margin-left: 5px;
-  color:  $text-color;
-  font-family: $primary-font;
-  padding: 20px;
-  background-color: rgba(221, 216, 196, .5);
-  padding-bottom: 10px;
-  width: 892px;
-
-  h1 {
-    font-family: $secondary-font;
-  }
-  a {
-    text-decoration: none;
-    color: $link-color;
-    font-family: $secondary-font;
-  }
 }
+// #social-links {
+//   margin: 25px;
+//
+//   i {
+//     color: $link-color;
+//     padding: 5px;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 // media queries
