@@ -15,6 +15,8 @@ body {
   right: 0;
   margin: auto; }
   .container #page {
+    min-width: 1244px;
+    max-width: 1300px;
     margin: 30px;
     position: relative; }
 
@@ -25,6 +27,11 @@ a {
 #box {
   float: right;
   width: 80%; }
+  #box h1 {
+    color: #BD9391; }
+  #box #first-name {
+    color: #BA6E6E;
+    font-family: Moriston, sans-serif; }
   #box .boxes {
     height: 300px;
     width: 300px;
@@ -35,22 +42,24 @@ a {
     background-color: rgba(221, 216, 196, 0.5); }
     #box .boxes img {
       opacity: 0.1; }
-  #box .letter {
-    position: absolute;
-    top: 90px;
-    left: 180px;
-    color: #45B69C;
-    font-size: 3em;
-    font-family: Moriston, sans-serif;
-    z-index: 1; }
-  #box .last-name {
+  #box .center-channel {
     clear: both;
     width: 912px;
+    padding: 20px 25px 20px 35px;
+    position: relative;
     font-family: Ananda, serif;
     font-size: 1.5em;
     color: #BD9391;
-    letter-spacing: 35px;
-    padding: 20px 25px 20px 35px; }
+    letter-spacing: 35px; }
+    #box .center-channel #social-links {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      #box .center-channel #social-links i {
+        color: #2C4251;
+        padding: 5px;
+        margin: 25px; }
 
 #left-col {
   float: left;
@@ -97,7 +106,8 @@ a {
     font-family: Moriston, sans-serif;
     line-height: 150%;
     letter-spacing: 1px;
-    margin-top: 200px; }
+    margin-top: 200px;
+    color: #45B69C; }
     #left-col #about .keyword {
       color: #2C4251; }
   #left-col #contact-info {
@@ -107,6 +117,8 @@ a {
     letter-spacing: 1px;
     margin-top: 200px;
     font-size: 2em; }
+    #left-col #contact-info a {
+      color: #45B69C; }
 
 .clearfix:after {
   content: " ";
@@ -114,16 +126,5 @@ a {
   display: block;
   height: 0;
   clear: both; }
-
-@media screen and (max-width: 1010px) {
-  .last-name {
-    display: none; }
-
-  #about {
-    width: 577px; } }
-@media screen and (max-width: 702px) {
-  #about {
-    width: 260px;
-    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
