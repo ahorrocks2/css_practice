@@ -12,16 +12,15 @@ $(document).ready(function() {
   });
 
   $("#about").hide();
+  $("#contact-info").hide();
 
   $("#about-me-button").click(function() {
+    $("#contact-info").hide(), $("#nav-buttons").animate({ top: "0px" }, 1000, function() { $("#about").show(); } );
+  });
 
-    $("#nav-buttons").animate({ top: "0px" }, 1000, function() { $("#about").show(); } ),
-
-                              (function() {
-    $("#nav-buttons").animate({ top:"280px" }, 1000, function() { $("#about").hide(); } )
-
-
-  }); });
+  $("#contact").click(function() {
+    $("#about").hide(), $("#nav-buttons").animate({ top:"560px" }, 1000, function() { $("#contact-info").show(); } );
+  });
 
 
 })

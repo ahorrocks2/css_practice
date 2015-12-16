@@ -7,6 +7,14 @@ $soft-red: #BA6E6E;
 $link-color: #2C4251;
 $text-color: #BD9391;
 
+@mixin nav-info {
+  color:  $text-color;
+  font-family: $primary-font;
+  line-height: 150%;
+  letter-spacing: 1px;
+  margin-top: 200px;
+}
+
 body {
   background-image: url('./images/new_year_background.png');
 }
@@ -101,6 +109,8 @@ a {
   height: 100%;
   padding: 20px;
 
+  text-align: center;
+
 
   #nav-buttons {
     color: white;
@@ -126,7 +136,7 @@ a {
       & :hover {
         cursor: pointer;
       }
-      
+
       h1 {
         position: absolute;
         top: 30px;
@@ -142,23 +152,24 @@ a {
       border-right: 100px solid transparent;
       border-left: 100px solid transparent;
 
-      a {
+      h2 {
         position: absolute;
-        top: -85px;
-        left: -50px;
+        top: -120px;
+        left: -70px;
       }
     }
   }
 
   #about {
-    color:  $text-color;
-    font-family: $primary-font;
-    line-height: 150%;
-    letter-spacing: 1px;
-    margin-top: 200px;
+    @include nav-info;
     .keyword {
       color: $link-color;
     }
+  }
+
+  #contact-info {
+    @include nav-info;
+    font-size: 2em;
   }
 
 }
