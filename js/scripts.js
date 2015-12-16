@@ -13,5 +13,15 @@ $(document).ready(function() {
 
   $("#about").hide();
 
+  $("#about-me-button").click(function() {
+
+    $("#nav-buttons").animate({ top: "0px" }, 1000, function() { $("#about").show(); } ),
+
+                              (function() {
+    $("#nav-buttons").animate({ top:"280px" }, 1000, function() { $("#about").hide(); } )
+
+
+  }); });
+
 
 })
