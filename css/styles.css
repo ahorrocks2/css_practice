@@ -20,18 +20,9 @@ body {
     margin: 30px;
     position: relative; }
 
-a {
-  text-decoration: none;
-  color: #2C4251; }
-
 #box {
   float: right;
   width: 80%; }
-  #box h1 {
-    color: #BD9391; }
-  #box #first-name {
-    color: #BA6E6E;
-    font-family: Moriston, sans-serif; }
   #box .boxes {
     height: 300px;
     width: 300px;
@@ -39,27 +30,34 @@ a {
     margin: 5px;
     text-align: center;
     position: relative;
-    background-color: rgba(221, 216, 196, 0.5); }
+    background-color: rgba(192, 183, 177, 0.5); }
     #box .boxes img {
       opacity: 0.1; }
   #box .center-channel {
     clear: both;
     width: 912px;
-    padding: 20px 25px 20px 35px;
+    padding: 20px 25px 30px 35px;
     position: relative;
+    margin-bottom: 30px;
     font-family: Ananda, serif;
     font-size: 1.5em;
-    color: #BD9391;
     letter-spacing: 35px; }
+    #box .center-channel h1 {
+      color: #bbc0cc; }
+    #box .center-channel #first-name {
+      color: #06D6A0;
+      font-family: Moriston, sans-serif; }
     #box .center-channel #social-links {
       position: absolute;
       top: 80%;
       left: 50%;
       transform: translate(-50%, -50%); }
       #box .center-channel #social-links i {
-        color: #2C4251;
+        color: #D8DBE2;
         padding: 5px;
         margin: 25px; }
+        #box .center-channel #social-links i:hover {
+          color: #54C6EB; }
 
 #left-col {
   float: left;
@@ -80,7 +78,7 @@ a {
       width: 0;
       height: 0;
       position: relative;
-      border-bottom: 100px solid #454851;
+      border-bottom: 100px solid #A9BCD0;
       border-right: 100px solid transparent;
       border-left: 100px solid transparent;
       margin-bottom: 10px; }
@@ -94,7 +92,7 @@ a {
       width: 0;
       height: 0;
       position: relative;
-      border-top: 100px solid #BD9391;
+      border-top: 100px solid #A9BCD0;
       border-right: 100px solid transparent;
       border-left: 100px solid transparent; }
       #left-col #nav-buttons #contact h2 {
@@ -102,23 +100,26 @@ a {
         top: -120px;
         left: -70px; }
   #left-col #about {
-    color: #BD9391;
+    color: #A9BCD0;
     font-family: Moriston, sans-serif;
     line-height: 150%;
     letter-spacing: 1px;
     margin-top: 200px;
-    color: #45B69C; }
+    color: #06D6A0; }
     #left-col #about .keyword {
-      color: #2C4251; }
+      color: #A9BCD0; }
   #left-col #contact-info {
-    color: #BD9391;
+    color: #A9BCD0;
     font-family: Moriston, sans-serif;
     line-height: 150%;
     letter-spacing: 1px;
     margin-top: 200px;
     font-size: 2em; }
     #left-col #contact-info a {
-      color: #45B69C; }
+      color: #808aa1;
+      text-decoration: none; }
+      #left-col #contact-info a:hover {
+        color: #06D6A0; }
 
 .clearfix:after {
   content: " ";

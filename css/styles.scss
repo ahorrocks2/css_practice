@@ -1,14 +1,13 @@
 $primary-font: Moriston, sans-serif;
 $secondary-font: Ananda, serif;
 $box-border: 3px solid #454851;
-$aqua: #45B69C;
-$grey: #454851;
-$soft-red: #BA6E6E;
-$link-color: #2C4251;
-$text-color: #BD9391;
+$grey: #D8DBE2;
+$blue: #A9BCD0;
+$teal: #06D6A0;
+$bright-blue: #54C6EB;
 
 @mixin nav-info {
-  color:  $text-color;
+  color:  $blue;
   font-family: $primary-font;
   line-height: 150%;
   letter-spacing: 1px;
@@ -53,23 +52,10 @@ body {
   }
 }
 
-a {
-  text-decoration: none;
-  color: $link-color;
-}
-
 #box {
   float:right;
   width: 80%;
 
-  h1 {
-    color: $text-color;
-  }
-
-  #first-name {
-    color: $soft-red;
-    font-family: $primary-font;
-  }
 
   .boxes {
     height: 300px;
@@ -78,7 +64,7 @@ a {
     margin: 5px;
     text-align: center;
     position: relative;
-    background-color: rgba(221, 216, 196, .5);
+    background-color: rgba(192, 183, 177, .5);
 
     img {
       opacity: 0.1;
@@ -88,21 +74,34 @@ a {
   .center-channel {
     clear:both;
     width: 912px;
-    padding: 20px 25px 20px 35px;
+    padding: 20px 25px 30px 35px;
     position: relative;
+    margin-bottom: 30px;
 
     font-family: $secondary-font;
     font-size: 1.5em;
-    color: $text-color ;
     letter-spacing: 35px;
+
+    h1 {
+      color: darken($grey, 10%);
+    }
+
+    #first-name {
+      color: $teal;
+      font-family: $primary-font;
+    }
 
     #social-links {
       @include centerer;
 
       i {
-        color: $link-color;
+        color: $grey;
         padding: 5px;
         margin: 25px;
+
+        &:hover {
+          color: $bright-blue;
+        }
       }
     }
   }
@@ -135,7 +134,7 @@ a {
       width: 0;
       height: 0;
       position: relative;
-      border-bottom: 100px solid $grey;
+      border-bottom: 100px solid $blue;
       border-right: 100px solid transparent;
       border-left: 100px solid transparent;
       margin-bottom: 10px;
@@ -156,7 +155,7 @@ a {
       width: 0;
       height: 0;
       position: relative;
-      border-top: 100px solid $text-color;
+      border-top: 100px solid $blue;
       border-right: 100px solid transparent;
       border-left: 100px solid transparent;
 
@@ -170,9 +169,9 @@ a {
 
   #about {
     @include nav-info;
-    color: $aqua;
+    color: $teal;
     .keyword {
-      color: $link-color;
+      color: $blue;
     }
   }
 
@@ -180,7 +179,12 @@ a {
     @include nav-info;
     font-size: 2em;
     a {
-      color: $aqua;
+      color: darken($grey, 30%);
+      text-decoration: none;
+
+      &:hover {
+        color: $teal;
+      }
     }
   }
 
