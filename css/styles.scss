@@ -1,33 +1,38 @@
 $primary-font: Moriston, sans-serif;
 $secondary-font: Ananda, serif;
-$box-border: 3px solid #454851;
-$grey: #D8DBE2;
-$blue: #A9BCD0;
-$teal: #06D6A0;
-$bright-blue: #54C6EB;
+
+$darkblue: #495867;
+$brightblue: #4281A4;
+$grey: #A2A79E;
+$red: #CE796B;
+$pink: #E7AD99;
+
 
 @mixin nav-info {
-  color:  $blue;
+  color:  $darkblue;
   font-family: $primary-font;
   line-height: 150%;
   letter-spacing: 1px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 @mixin centerer {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 @mixin centerer-icons {
   position: absolute;
-  top: 90%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+
+
+/*********************************/
 body {
   background-image: url('./images/new_year_background.png');
 }
@@ -47,59 +52,61 @@ body {
 .container {
   display: flex;
 
-
   #box {
     display: flex;
-    flex-direction: column;
-
-    .row {
-      display: flex;
-      justify-content: flex-start;
-    }
+    flex-wrap: wrap;
+    max-width: 700px;
 
     .boxes {
       height: 300px;
       width: 300px;
       margin: 20px;
-      background-color: rgba(192, 183, 177, .5);
-      opacity: 0.5;
       position: relative;
 
-      #name {
-
-        #last-name {
-          font-family: $secondary-font;
-          color: darken($teal, 20%);
-          font-size: 1.5em;
-          letter-spacing: 3px;
-        }
-
-        #first-name {
-          font-size: 3em;
-          color: darken($teal, 10%);
-          font-family: $primary-font;
-        }
+      &:not(#box4) {
+        opacity: 0.5;
       }
-      #social-links {
-        @include centerer-icons;
 
-        i {
-          color: darken($blue, 10%);
-          padding: 3px;
-          z-index: 1;
-          &:hover {
-            color: $bright-blue;
-          }
-        }
+      &:not(#box4):hover {
+        opacity: 1;
       }
     }
   }
 
-
   #nav {
-    min-width: 250px;
+    width: 300px;
     text-align: center;
     position: relative;
+    padding: 20px;
+    margin: 50px;
+
+    #name {
+      #last-name {
+        font-family: $secondary-font;
+        color: $darkblue;
+        font-size: 1.5em;
+        letter-spacing: 3px;
+      }
+
+      #first-name {
+        font-size: 3em;
+        color: $brightblue;
+        font-family: $primary-font;
+      }
+    }
+
+    #social-links {
+      @include centerer-icons;
+
+      i {
+        color: $red;
+        padding: 3px;
+        z-index: 1;
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
 
     #nav-buttons {
       color: white;
@@ -108,36 +115,36 @@ body {
 
       @include centerer;
 
+      // #about-me-button {
+      //   width: 0;
+      //   height: 0;
+      //   position: relative;
+      //   border-bottom: 100px solid $grey;
+      //   border-right: 100px solid transparent;
+      //   border-left: 100px solid transparent;
+      //   margin-bottom: 10px;
+      //
+      //
+      //   & :hover{
+      //     cursor: pointer;
+      //   }
+      //
+      //   h1 {
+      //     position: absolute;
+      //     top: 30px;
+      //     left: -65px;
+      //   }
+      // }
+
       #about-me-button {
         width: 0;
         height: 0;
         position: relative;
-        border-bottom: 100px solid $blue;
+        border-top: 100px solid $grey ;
         border-right: 100px solid transparent;
         border-left: 100px solid transparent;
-        margin-bottom: 10px;
-
-
-        & :hover{
-          cursor: pointer;
-        }
 
         h1 {
-          position: absolute;
-          top: 30px;
-          left: -65px;
-        }
-      }
-
-      #contact {
-        width: 0;
-        height: 0;
-        position: relative;
-        border-top: 100px solid $blue;
-        border-right: 100px solid transparent;
-        border-left: 100px solid transparent;
-
-        h2 {
           position: absolute;
           top: -120px;
           left: -70px;
@@ -147,21 +154,20 @@ body {
 
     #about {
       @include nav-info;
-      color: $teal;
-      .keyword {
-        color: $blue;
-      }
+      color: $darkblue;
+      padding: 20px;
+
     }
 
     #contact-info {
       @include nav-info;
       font-size: 2em;
       a {
-        color: darken($grey, 30%);
+        color: $brightblue;
         text-decoration: none;
 
         &:hover {
-          color: $teal;
+          color: $grey;
         }
       }
     }

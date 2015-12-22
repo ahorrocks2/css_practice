@@ -1,3 +1,4 @@
+/*********************************/
 body {
   background-image: url("./images/new_year_background.png"); }
 
@@ -12,94 +13,81 @@ body {
   display: flex; }
   .container #box {
     display: flex;
-    flex-direction: column; }
-    .container #box .row {
-      display: flex;
-      justify-content: flex-start; }
+    flex-wrap: wrap;
+    max-width: 700px; }
     .container #box .boxes {
       height: 300px;
       width: 300px;
       margin: 20px;
-      background-color: rgba(192, 183, 177, 0.5);
-      opacity: 0.5;
       position: relative; }
-      .container #box .boxes #name #last-name {
-        font-family: Ananda, serif;
-        color: #037356;
-        font-size: 1.5em;
-        letter-spacing: 3px; }
-      .container #box .boxes #name #first-name {
-        font-size: 3em;
-        color: #05a47b;
-        font-family: Moriston, sans-serif; }
-      .container #box .boxes #social-links {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-        .container #box .boxes #social-links i {
-          color: #88a2be;
-          padding: 3px;
-          z-index: 1; }
-          .container #box .boxes #social-links i:hover {
-            color: #54C6EB; }
+      .container #box .boxes:not(#box4) {
+        opacity: 0.5; }
+      .container #box .boxes:not(#box4):hover {
+        opacity: 1; }
   .container #nav {
-    min-width: 250px;
+    width: 300px;
     text-align: center;
-    position: relative; }
+    position: relative;
+    padding: 20px;
+    margin: 50px; }
+    .container #nav #name #last-name {
+      font-family: Ananda, serif;
+      color: #495867;
+      font-size: 1.5em;
+      letter-spacing: 3px; }
+    .container #nav #name #first-name {
+      font-size: 3em;
+      color: #4281A4;
+      font-family: Moriston, sans-serif; }
+    .container #nav #social-links {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .container #nav #social-links i {
+        color: #CE796B;
+        padding: 3px;
+        z-index: 1; }
+        .container #nav #social-links i:hover {
+          color: #E7AD99; }
     .container #nav #nav-buttons {
       color: white;
       letter-spacing: 3px;
       font-family: Moriston, sans-serif;
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%); }
       .container #nav #nav-buttons #about-me-button {
         width: 0;
         height: 0;
         position: relative;
-        border-bottom: 100px solid #A9BCD0;
-        border-right: 100px solid transparent;
-        border-left: 100px solid transparent;
-        margin-bottom: 10px; }
-        .container #nav #nav-buttons #about-me-button :hover {
-          cursor: pointer; }
-        .container #nav #nav-buttons #about-me-button h1 {
-          position: absolute;
-          top: 30px;
-          left: -65px; }
-      .container #nav #nav-buttons #contact {
-        width: 0;
-        height: 0;
-        position: relative;
-        border-top: 100px solid #A9BCD0;
+        border-top: 100px solid #A2A79E;
         border-right: 100px solid transparent;
         border-left: 100px solid transparent; }
-        .container #nav #nav-buttons #contact h2 {
+        .container #nav #nav-buttons #about-me-button h1 {
           position: absolute;
           top: -120px;
           left: -70px; }
     .container #nav #about {
-      color: #A9BCD0;
+      color: #495867;
       font-family: Moriston, sans-serif;
       line-height: 150%;
       letter-spacing: 1px;
-      margin-top: 200px;
-      color: #06D6A0; }
-      .container #nav #about .keyword {
-        color: #A9BCD0; }
+      margin-top: 100px;
+      color: #495867;
+      padding: 20px; }
     .container #nav #contact-info {
-      color: #A9BCD0;
+      color: #495867;
       font-family: Moriston, sans-serif;
       line-height: 150%;
       letter-spacing: 1px;
-      margin-top: 200px;
+      margin-top: 100px;
       font-size: 2em; }
       .container #nav #contact-info a {
-        color: #808aa1;
+        color: #4281A4;
         text-decoration: none; }
         .container #nav #contact-info a:hover {
-          color: #06D6A0; }
+          color: #A2A79E; }
 
 /*# sourceMappingURL=styles.css.map */
