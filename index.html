@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <title>Alyssa Horrocks</title>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -12,66 +12,51 @@
   </head>
   <body>
     <div class="container">
-      <div id="page" class="clearfix">
-        <div id="box">
-
-          <div class="boxes" id="box-1">
-            <img src="css/images/hang-1.png" id="hang-1"/>
+      <div id="nav">
+        <div id="nav-buttons">
+          <div id="about-me-button">
+            <h1>ABOUT</h1>
           </div>
 
-          <div class="boxes" id="box-2">
-            <img src="css/images/stack.png" id="stack"/>
-          </div>
-
-          <div class="boxes" id="box-3">
-            <img src="css/images/missed.png" id="missed"/>
-          </div>
-
-          <div class="center-channel">
-            <h1><span id="first-name">alyssa</span>HORROCKS</h1>
-            <div id="social-links">
-              <a href="www.github.com/ahorrocks2"><i class="fa fa-github fa-lg"></i></a>
-              <a href="https://www.linkedin.com/in/alyssahorrocks"><i class="fa fa-linkedin fa-lg"></i></a>
-              <a href="www.instagram.com/classlyss"><i class="fa fa-instagram fa-lg"></i></a>
-            </div>
-          </div>
-
-          <div class="boxes" id="box-4">
-            <img src="css/images/pigdice.png" id="pigdice"/>
-          </div>
-
-          <div class="boxes" id="box-5">
-            <img src="css/images/qanda.png" id="qanda"/>
-          </div>
-          <div class="boxes" id="box-6">
-
+          <div id="contact">
+            <h2>CONTACT</h2>
           </div>
         </div>
 
-        <div id="left-col" class="clearfix">
-          <div id="nav-buttons">
-            <div id="about-me-button">
-              <h1>ABOUT</h1>
-            </div>
+        <p id="about">
+          I am a web developer fresh out of code school in <span class="keyword">Portland</span> and full of southern charm with a background in <span class="keyword">classical languages</span>. Through <span class="keyword">Epicodus</span> I have experience in a few languages and a desire to learn more. Programming is a new passion that combines my interest in the way languages connect people and a love of puzzles. If you want to know more about me or my work, feel free to contact me!
+        </p>
 
-            <div id="contact">
-              <h2>CONTACT</h2>
-            </div>
-          </div>
-
-
-          <p id="about">
-            I am a web developer fresh out of code school in <span class="keyword">Portland</span> and full of southern charm with a background in <span class="keyword">classical languages</span>. Through <span class="keyword">Epicodus</span> I have experience in a few languages and a desire to learn more. Programming is a new passion that combines my interest in the way languages connect people and a love of puzzles. If you want to know more about me or my work, feel free to contact me!
-          </p>
-
-          <p id="contact-info">
-            <a href="mailto:alyssa.horrocks2@gmail.com" target="_top">Send an Email</a> <br><br>
-            <a href="www.linkedin.com/linkedin/alyssahorrocks">Check out my LinkedIn</a>
-          </p>
-
-        </div>
-
+        <p id="contact-info">
+          <a href="mailto:alyssa.horrocks2@gmail.com" target="_top">Send an Email</a> <br><br>
+          <a href="www.linkedin.com/linkedin/alyssahorrocks">Check out my LinkedIn</a>
+        </p>
       </div>
+
+      <div id="box">
+        <div class="row">
+          <img src="css/images/hang-1.png" class="boxes" id="box1"/>
+          <img src="css/images/stack.png" class="boxes" id="box2"/>
+          <img src="css/images/missed.png" class="boxes" id="box3"/>
+        </div>
+
+        <div class="row">
+          <div class="boxes">
+            <h1 id="name"><span id="first-name">alyssa</span><br/><span id="last-name">HORROCKS</span></h1>
+            <div id="social-links">
+              <a href="www.github.com/ahorrocks2"><i class="fa fa-github fa-3x"></i></a>
+              <a href="https://www.linkedin.com/in/alyssahorrocks"><i class="fa fa-linkedin fa-3x"></i></a>
+              <a href="www.instagram.com/classlyss"><i class="fa fa-instagram fa-3x"></i></a>
+            </div>
+          </div>
+          <img src="css/images/pigdice.png" class="boxes" id="box5"/>
+        </div>
+
+        <div class="row">
+          <img src="css/images/qanda.png" class="boxes" id="box7"/>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

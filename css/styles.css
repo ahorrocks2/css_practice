@@ -7,125 +7,99 @@ body {
 @font-face {
   font-family: 'Ananda';
   src: url("./fonts/Ananda-Regular.ttf") format("truetype"); }
+/* *********************** */
 .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto; }
-  .container #page {
-    min-width: 1244px;
-    max-width: 1300px;
-    margin: 30px;
-    position: relative; }
-
-#box {
-  float: right;
-  width: 80%; }
-  #box .boxes {
-    height: 300px;
-    width: 300px;
-    float: left;
-    margin: 5px;
+  display: flex; }
+  .container #box {
+    display: flex;
+    flex-direction: column; }
+    .container #box .row {
+      display: flex;
+      justify-content: flex-start; }
+    .container #box .boxes {
+      height: 300px;
+      width: 300px;
+      margin: 20px;
+      background-color: rgba(192, 183, 177, 0.5);
+      opacity: 0.5;
+      position: relative; }
+      .container #box .boxes #name #last-name {
+        font-family: Ananda, serif;
+        color: #037356;
+        font-size: 1.5em;
+        letter-spacing: 3px; }
+      .container #box .boxes #name #first-name {
+        font-size: 3em;
+        color: #05a47b;
+        font-family: Moriston, sans-serif; }
+      .container #box .boxes #social-links {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        .container #box .boxes #social-links i {
+          color: #88a2be;
+          padding: 3px;
+          z-index: 1; }
+          .container #box .boxes #social-links i:hover {
+            color: #54C6EB; }
+  .container #nav {
+    min-width: 250px;
     text-align: center;
-    position: relative;
-    background-color: rgba(192, 183, 177, 0.5); }
-    #box .boxes img {
-      opacity: 0.1; }
-  #box .center-channel {
-    clear: both;
-    width: 912px;
-    padding: 20px 25px 30px 35px;
-    position: relative;
-    margin-bottom: 30px;
-    font-family: Ananda, serif;
-    font-size: 1.5em;
-    letter-spacing: 35px; }
-    #box .center-channel h1 {
-      color: #bbc0cc; }
-    #box .center-channel #first-name {
-      color: #06D6A0;
-      font-family: Moriston, sans-serif; }
-    #box .center-channel #social-links {
+    position: relative; }
+    .container #nav #nav-buttons {
+      color: white;
+      letter-spacing: 3px;
+      font-family: Moriston, sans-serif;
       position: absolute;
-      top: 80%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-      #box .center-channel #social-links i {
-        color: #D8DBE2;
-        padding: 5px;
-        margin: 25px; }
-        #box .center-channel #social-links i:hover {
-          color: #54C6EB; }
-
-#left-col {
-  float: left;
-  position: relative;
-  width: 15%;
-  height: 100%;
-  padding: 20px;
-  text-align: center; }
-  #left-col #nav-buttons {
-    color: white;
-    letter-spacing: 3px;
-    font-family: Moriston, sans-serif;
-    position: absolute;
-    top: 280px;
-    left: 20px;
-    right: 0; }
-    #left-col #nav-buttons #about-me-button {
-      width: 0;
-      height: 0;
-      position: relative;
-      border-bottom: 100px solid #A9BCD0;
-      border-right: 100px solid transparent;
-      border-left: 100px solid transparent;
-      margin-bottom: 10px; }
-      #left-col #nav-buttons #about-me-button :hover {
-        cursor: pointer; }
-      #left-col #nav-buttons #about-me-button h1 {
-        position: absolute;
-        top: 30px;
-        left: -65px; }
-    #left-col #nav-buttons #contact {
-      width: 0;
-      height: 0;
-      position: relative;
-      border-top: 100px solid #A9BCD0;
-      border-right: 100px solid transparent;
-      border-left: 100px solid transparent; }
-      #left-col #nav-buttons #contact h2 {
-        position: absolute;
-        top: -120px;
-        left: -70px; }
-  #left-col #about {
-    color: #A9BCD0;
-    font-family: Moriston, sans-serif;
-    line-height: 150%;
-    letter-spacing: 1px;
-    margin-top: 200px;
-    color: #06D6A0; }
-    #left-col #about .keyword {
-      color: #A9BCD0; }
-  #left-col #contact-info {
-    color: #A9BCD0;
-    font-family: Moriston, sans-serif;
-    line-height: 150%;
-    letter-spacing: 1px;
-    margin-top: 200px;
-    font-size: 2em; }
-    #left-col #contact-info a {
-      color: #808aa1;
-      text-decoration: none; }
-      #left-col #contact-info a:hover {
-        color: #06D6A0; }
-
-.clearfix:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both; }
+      .container #nav #nav-buttons #about-me-button {
+        width: 0;
+        height: 0;
+        position: relative;
+        border-bottom: 100px solid #A9BCD0;
+        border-right: 100px solid transparent;
+        border-left: 100px solid transparent;
+        margin-bottom: 10px; }
+        .container #nav #nav-buttons #about-me-button :hover {
+          cursor: pointer; }
+        .container #nav #nav-buttons #about-me-button h1 {
+          position: absolute;
+          top: 30px;
+          left: -65px; }
+      .container #nav #nav-buttons #contact {
+        width: 0;
+        height: 0;
+        position: relative;
+        border-top: 100px solid #A9BCD0;
+        border-right: 100px solid transparent;
+        border-left: 100px solid transparent; }
+        .container #nav #nav-buttons #contact h2 {
+          position: absolute;
+          top: -120px;
+          left: -70px; }
+    .container #nav #about {
+      color: #A9BCD0;
+      font-family: Moriston, sans-serif;
+      line-height: 150%;
+      letter-spacing: 1px;
+      margin-top: 200px;
+      color: #06D6A0; }
+      .container #nav #about .keyword {
+        color: #A9BCD0; }
+    .container #nav #contact-info {
+      color: #A9BCD0;
+      font-family: Moriston, sans-serif;
+      line-height: 150%;
+      letter-spacing: 1px;
+      margin-top: 200px;
+      font-size: 2em; }
+      .container #nav #contact-info a {
+        color: #808aa1;
+        text-decoration: none; }
+        .container #nav #contact-info a:hover {
+          color: #06D6A0; }
 
 /*# sourceMappingURL=styles.css.map */

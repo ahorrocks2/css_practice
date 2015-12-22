@@ -16,7 +16,14 @@ $bright-blue: #54C6EB;
 
 @mixin centerer {
   position: absolute;
-  top: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerer-icons {
+  position: absolute;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -35,192 +42,128 @@ body {
   src: url('./fonts/Ananda-Regular.ttf') format('truetype');
 }
 
+
+/* *********************** */
 .container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
 
-  margin: auto;
 
-  #page {
-    min-width: 1244px;
-    max-width: 1300px;
-    margin: 30px;
-    position: relative;
+  #box {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .boxes {
+      height: 300px;
+      width: 300px;
+      margin: 20px;
+      background-color: rgba(192, 183, 177, .5);
+      opacity: 0.5;
+      position: relative;
+
+      #name {
+
+        #last-name {
+          font-family: $secondary-font;
+          color: darken($teal, 20%);
+          font-size: 1.5em;
+          letter-spacing: 3px;
+        }
+
+        #first-name {
+          font-size: 3em;
+          color: darken($teal, 10%);
+          font-family: $primary-font;
+        }
+      }
+      #social-links {
+        @include centerer-icons;
+
+        i {
+          color: darken($blue, 10%);
+          padding: 3px;
+          z-index: 1;
+          &:hover {
+            color: $bright-blue;
+          }
+        }
+      }
+    }
   }
-}
-
-#box {
-  float:right;
-  width: 80%;
 
 
-  .boxes {
-    height: 300px;
-    width: 300px;
-    float: left;
-    margin: 5px;
+  #nav {
+    min-width: 250px;
     text-align: center;
     position: relative;
-    background-color: rgba(192, 183, 177, .5);
 
-    img {
-      opacity: 0.1;
-    }
-  }
-
-  .center-channel {
-    clear:both;
-    width: 912px;
-    padding: 20px 25px 30px 35px;
-    position: relative;
-    margin-bottom: 30px;
-
-    font-family: $secondary-font;
-    font-size: 1.5em;
-    letter-spacing: 35px;
-
-    h1 {
-      color: darken($grey, 10%);
-    }
-
-    #first-name {
-      color: $teal;
+    #nav-buttons {
+      color: white;
+      letter-spacing: 3px;
       font-family: $primary-font;
-    }
 
-    #social-links {
       @include centerer;
 
-      i {
-        color: $grey;
-        padding: 5px;
-        margin: 25px;
+      #about-me-button {
+        width: 0;
+        height: 0;
+        position: relative;
+        border-bottom: 100px solid $blue;
+        border-right: 100px solid transparent;
+        border-left: 100px solid transparent;
+        margin-bottom: 10px;
+
+
+        & :hover{
+          cursor: pointer;
+        }
+
+        h1 {
+          position: absolute;
+          top: 30px;
+          left: -65px;
+        }
+      }
+
+      #contact {
+        width: 0;
+        height: 0;
+        position: relative;
+        border-top: 100px solid $blue;
+        border-right: 100px solid transparent;
+        border-left: 100px solid transparent;
+
+        h2 {
+          position: absolute;
+          top: -120px;
+          left: -70px;
+        }
+      }
+    }
+
+    #about {
+      @include nav-info;
+      color: $teal;
+      .keyword {
+        color: $blue;
+      }
+    }
+
+    #contact-info {
+      @include nav-info;
+      font-size: 2em;
+      a {
+        color: darken($grey, 30%);
+        text-decoration: none;
 
         &:hover {
-          color: $bright-blue;
+          color: $teal;
         }
       }
     }
   }
 }
-
-
-#left-col {
-  float: left;
-  position: relative;
-  width: 15%;
-  height: 100%;
-  padding: 20px;
-
-
-  text-align: center;
-
-
-  #nav-buttons {
-    color: white;
-    letter-spacing: 3px;
-    font-family: $primary-font;
-
-    position: absolute;
-    top: 280px;
-    left: 20px;
-    right: 0;
-
-
-    #about-me-button {
-      width: 0;
-      height: 0;
-      position: relative;
-      border-bottom: 100px solid $blue;
-      border-right: 100px solid transparent;
-      border-left: 100px solid transparent;
-      margin-bottom: 10px;
-
-
-      & :hover {
-        cursor: pointer;
-      }
-
-      h1 {
-        position: absolute;
-        top: 30px;
-        left: -65px;
-      }
-    }
-
-    #contact {
-      width: 0;
-      height: 0;
-      position: relative;
-      border-top: 100px solid $blue;
-      border-right: 100px solid transparent;
-      border-left: 100px solid transparent;
-
-      h2 {
-        position: absolute;
-        top: -120px;
-        left: -70px;
-      }
-    }
-  }
-
-  #about {
-    @include nav-info;
-    color: $teal;
-    .keyword {
-      color: $blue;
-    }
-  }
-
-  #contact-info {
-    @include nav-info;
-    font-size: 2em;
-    a {
-      color: darken($grey, 30%);
-      text-decoration: none;
-
-      &:hover {
-        color: $teal;
-      }
-    }
-  }
-
-}
-
-
-.clearfix:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-
-
-
-
-// media queries
-//
-//
-// @media screen and (max-width: 1010px) {
-//   .last-name {
-//     display: none;
-//   }
-//
-//   #about {
-//     width: 577px;
-//   }
-//
-// }
-//
-// @media screen and (max-width: 702px) {
-//   #about {
-//     width: 260px;
-//     text-align: center;
-//   }
-//
-// }
